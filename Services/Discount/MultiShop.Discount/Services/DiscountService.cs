@@ -5,11 +5,11 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MultiShop.Discount.Services
 {
-    public class CouponService : ICouponServices
+    public class DiscountService : IDiscountServices
     {
         private readonly DapperContext _context;
 
-        public CouponService(DapperContext context)
+        public DiscountService(DapperContext context)
         {
             _context = context;
         }
@@ -25,7 +25,7 @@ namespace MultiShop.Discount.Services
 
             using (var connection = _context.CreateConnection())
             {
-                await connection.ExecuteAsync(query, parameters);
+                await connection.ExecuteAsync(query, parameters);//
             }
         }
                 public async Task DeleteCouponAsync(string id)
