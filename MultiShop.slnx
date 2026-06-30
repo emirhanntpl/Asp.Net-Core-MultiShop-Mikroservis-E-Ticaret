@@ -6,4 +6,18 @@
   <Folder Name="/Services/Discount/">
     <Project Path="Services/Discount/MultiShop.Discount/MultiShop.Discount.csproj" />
   </Folder>
+  <Folder Name="/Services/Order/" />
+  <Folder Name="/Services/Order/Core/">
+    <Project Path="Services/Order/Core/MultiShop.Order.Application/MultiShop.Order.Application.csproj" />
+    <Project Path="Services/Order/Core/MultiShop.Order.Domain/MultiShop.Order.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Services/Order/Core/Interfaces/">
+    <File Path="IRepository.cs" />
+  </Folder>
+  <Folder Name="/Services/Order/Infrastructure/">
+    <Project Path="Order/Infrastructure/MultiShop.Order.Persistence/MultiShop.Order.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Services/Order/Presantation/">
+    <Project Path="Services/Order/Presantation/MultiShop.Order.WebApi/MultiShop.Order.WebApi.csproj" />
+  </Folder>
 </Solution>
