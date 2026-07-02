@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Application.Features.Commands.AddressCommands
+namespace MultiShop.Order.Application.Features.Commands.OrderDetailCommands
 {
-    internal class RemoveAddressCommand
+    internal class RemoveOrderDetailCommand
     {
         public int Id { get; set; }
 
-        public RemoveAddressCommand(int id)
+        public RemoveOrderDetailCommand(int id)
         {
             Id = id;
         }

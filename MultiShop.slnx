@@ -12,7 +12,7 @@
     <Project Path="Services/Order/Core/MultiShop.Order.Domain/MultiShop.Order.Domain.csproj" />
   </Folder>
   <Folder Name="/Services/Order/Core/Interfaces/">
-    <File Path="IRepository.cs" />
+    <Project Path="IRepositoryy/IRepository.csproj" Id="a882b258-4efa-42e7-99af-a107b902502c" />
   </Folder>
   <Folder Name="/Services/Order/Infrastructure/">
     <Project Path="Order/Infrastructure/MultiShop.Order.Persistence/MultiShop.Order.Persistence.csproj" />

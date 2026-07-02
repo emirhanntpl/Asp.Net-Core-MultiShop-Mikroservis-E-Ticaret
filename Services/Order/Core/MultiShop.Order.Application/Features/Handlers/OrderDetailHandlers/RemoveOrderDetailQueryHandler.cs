@@ -1,5 +1,6 @@
 ﻿using IRepository;
 using MultiShop.Order.Application.Features.Commands.AddressCommands;
+using MultiShop.Order.Application.Features.Commands.OrderDetailCommands;
 using MultiShop.Order.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,18 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Application.Features.Handlers.AddressHandlers
+namespace MultiShop.Order.Application.Features.Handlers.OrderDetailHandlers
 {
-    internal class RemoveAddressCommandHandler
+    public class RemoveOrderDetailQueryHandler
     {
-        private readonly IRepository<Address> _repository;
+        private readonly IRepository<OrderDetail> _repository;
 
-        public RemoveAddressCommandHandler(IRepository<Address> repository)
+        public RemoveOrderDetailQueryHandler(IRepository<OrderDetail> repository)
         {
             _repository = repository;
         }
 
-        public async Task Handler(RemoveAddressCommand command)
+        public async Task Handler(RemoveOrderDetailCommand command)
         {
 
             var values = await _repository.GetByIdAsync(command.Id);

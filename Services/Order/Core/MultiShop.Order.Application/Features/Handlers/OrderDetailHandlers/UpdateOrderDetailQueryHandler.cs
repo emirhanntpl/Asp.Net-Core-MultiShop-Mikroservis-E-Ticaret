@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Order.Application.Features.Handlers.AddressHandlers
+namespace MultiShop.Order.Application.Features.Handlers.OrderDetailHandlers
 {
-    public class UpdateAddressCommandHandler
+    internal class UpdateOrderDetailQueryHandler
     {
-        private readonly IRepository<Address> _repository;
 
-        public UpdateAddressCommandHandler(IRepository<Address> repository)
+        private readonly IRepository<OrderDetail> _repository;
+
+        public UpdateOrderDetailQueryHandler(IRepository<OrderDetail> repository)
         {
             _repository = repository;
         }
-        public async Task Handler(UpdateAddressCommand command)
+        public async Task Handler(UpdateOrderDetailCommand command)
         {
             var values = await _repository.GetByIdAsync(command.AddressId);
             values.Detail = command.Detail;
@@ -26,6 +27,5 @@ namespace MultiShop.Order.Application.Features.Handlers.AddressHandlers
             values.UserId = command.UserId;
             await _repository.UpdateAsync(values);
         }
-
     }
 }

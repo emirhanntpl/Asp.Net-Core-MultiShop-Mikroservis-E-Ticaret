@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
+    <ProjectReference Include="..\..\..\..\IRepositoryy\IRepository.csproj" />
+    <ProjectReference Include="..\..\..\Catalog\MultiShop.Catalog\MultiShop.Catalog.csproj" />
+    <ProjectReference Include="..\..\..\Discount\MultiShop.Discount\MultiShop.Discount.csproj" />
+    <ProjectReference Include="..\..\Presantation\MultiShop.Order.WebApi\MultiShop.Order.WebApi.csproj" />
+    <ProjectReference Include="..\MultiShop.Order.Domain\MultiShop.Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>
